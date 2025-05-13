@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Product | Prism</title>
+  <style>
+    
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 40px 20px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  form {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: auto;
+  }
+
+  input, select, textarea, button {
+    width: 100%;
+    padding: 14px 0px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+}
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  @media screen and (max-width: 600px) {
+    form {
+      padding: 20px;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <h2>Order Your Product</h2>
+
+  <form id="orderForm">
+    <input type="text" name="name" id="name" placeholder="Your Name" required />
+    <input type="email" name="email" id="email" placeholder="Your Email" required />
+    <input type="text" name="product" id="productInput" placeholder="Product" required readonly />
+
+    <label for="size">Choose Size:</label>
+    <select name="size" id="size" required></select>
+
+    <textarea name="address" id="address" placeholder="Shipping Address" required></textarea>
+    <input type="tel" name="phone" id="phone" placeholder="WhatsApp Number" required />
+    <button type="submit">Place Order</button>
+    <button type="button" style="background-color: #ccc; color: #333;" onclick="history.back()">Go Back</button>
+
+
+  </form>
+
+  <div id="confirmationModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:9999;">
+  <div style="background:white; padding:20px; border-radius:10px; max-width:500px; margin:80px auto; position:relative;">
+    <h3>Confirm Your Order</h3>
+    <div id="orderDetails" style="margin:15px 0;"></div>
+    <img id="productImage" src="" alt="Product" style="max-width:100%; margin-bottom:15px; display:none;" />
+    <p style="border: 2px solid #810d0d; border-radius: 4px; padding: 10px; background-color: #fff0f0;">
+  <strong>
+    &bull; By clicking "Confirm Order", we will receive your order via email.<br>
+    &bull; You will be redirected to WhatsApp. Please send the same order details there as well so that we can confirm your order quickly.
+  </strong>
+  <br><br>
+  <a href="javascript:void(0);" onclick="toggleMalayalam()" style="background:#fff0f0; color:#0acdf4d4;">
+    Show in Malayalam
+  </a>
+  <div id="mlText" style="display:none; margin-top:10px;">
+    <strong>
+      &bull; "Confirm Order" അമർത്തിയാൽ, നിങ്ങളുടെ ഓർഡർ ഇമെയിൽ വഴി Prism-ലേക്ക് അയക്കപ്പെടും.<br>
+      &bull; തുടർന്ന് നിങ്ങൾ WhatsApp-ലേക്ക് റീഡയറക്റ്റ് ചെയ്യപ്പെടും. ദയവായി ഒരേ വിവരങ്ങൾ അവിടെയും അയയ്ക്കുക, അതിനാൽ നിങ്ങളുടെ ഓർഡർ വേഗത്തിൽ സ്ഥിരീകരിക്കാൻ സാധിക്കും.
+    </strong>
+  </div>
+</p>
+    <button id="confirmOrderBtn" style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">Confirm Order</button>
+    <button onclick="document.getElementById('confirmationModal').style.display='none'" style="background-color:#ccc; color:#000; padding:10px 20px; border:none; border-radius:6px; margin-left:1px;">Cancel</button>
+  </div>
+</div>
+
+<div id="orderConfirmation" style="display: none; text-align: center; padding: 20px; color: green; font-weight: bold;">
+  ✅ Your order has been successfully placed!<a href="index.html">Go back to Home page</a>
+</div>
+
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const product = params.get('product');
+  const sizes = params.get('sizes')?.split(',') || [];
+  const image = params.get('img'); // optional image in URL like ?img=url
+
+  document.getElementById('productInput').value = product || '';
+
+  const sizeSelect = document.getElementById('size');
+  sizes.forEach(size => {
+    const option = document.createElement('option');
+    option.value = size;
+    option.textContent = size;
+    sizeSelect.appendChild(option);
+  });
+
+  document.getElementById('orderForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const product = document.getElementById('productInput').value;
+    const size = document.getElementById('size').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+
+    // Show modal with order details
+    const detailsHTML = `
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Product:</strong> ${product}</p>
+      <p><strong>Size:</strong> ${size}</p>
+      <p><strong>Address:</strong> ${address}</p>
+      <p><strong>WhatsApp:</strong> ${phone}</p>
+    `;
+    document.getElementById('orderDetails').innerHTML = detailsHTML;
+
+    // If image is present, show it
+    const imgTag = document.getElementById('productImage');
+    if (image && image.trim() !== '') {
+      imgTag.src = image;
+      imgTag.style.display = 'block';
+    }else {
+      imgTag.style.display = 'none';
+    }
+
+    document.getElementById('confirmationModal').style.display = 'block';
+
+    // Confirm button logic
+   document.getElementById('confirmOrderBtn').onclick = function () {
+  // Send email via Formspree using fetch
+  fetch('https://formspree.io/f/mgvkybje', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      product: product,
+      size: size,
+      address: address,
+      phone: phone
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      // ✅ Show order confirmation message
+      document.getElementById('orderConfirmation').style.display = 'block';
+
+      // Optional: Clear the form or hide it
+      document.getElementById('orderForm').reset(); // if your form has id="orderForm"
+
+      // Optional: Scroll to the message
+      document.getElementById('orderConfirmation').scrollIntoView({ behavior: 'smooth' });
+
+      // Close the confirmation modal
+      document.getElementById('confirmationModal').style.display = 'none';
+    } else {
+      console.error("Formspree response error");
+    }
+  })
+  .catch(error => {
+    console.error("Network or form error:", error);
+  });
+
+      // Open WhatsApp
+      const message = `Hello, I just placed an order on your website:\n\nName: ${name}\nEmail: ${email}\nProduct: ${product}\nSize: ${size}\nAddress: ${address}\nWhatsApp: ${phone}`;
+      const whatsappURL = `https://wa.me/+919446275127?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
+
+      // Close modal
+      document.getElementById('confirmationModal').style.display = 'none';
+    };
+  });
+  
+  function toggleMalayalam() {
+    const mlText = document.getElementById('mlText');
+    const link = event.target;
+    if (mlText.style.display === 'none') {
+      mlText.style.display = 'block';
+      link.textContent = 'Hide Malayalam';
+    } else {
+      mlText.style.display = 'none';
+      link.textContent = 'Show in Malayalam';
+    }
+  }
+</script>
+
+
+</body>
+</html>
+<!--
+  This HTML file is a simple order form for a product. It includes fields for the user's name, email, product selection, size, shipping address, and WhatsApp number. 
+  Upon submission, it displays a confirmation modal with the order details and allows the user to confirm the order via email and WhatsApp.
