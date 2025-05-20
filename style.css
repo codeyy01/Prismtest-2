@@ -55,7 +55,7 @@ body{
     justify-content: space-between;
     padding: 20px 20px;
     background: #9ded6b;
-    background: linear-gradient(305deg, rgb(103, 121, 92) 0%, rgb(115, 148, 102) 50%, rgb(23, 30, 18) 100%);
+    background: linear-gradient(910deg, rgb(231, 227, 227) 0%, rgb(253, 246, 246) 50%, rgb(219, 216, 216) 100%);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.19);
     position: sticky;
     top: 0;
@@ -93,7 +93,7 @@ body{
 
 #navbar li a:hover,
 #navbar li a.active {
-    color: rgb(255, 255, 255);
+    color: rgb(68, 101, 39);
 }
 
 #navbar li a.active::after,
