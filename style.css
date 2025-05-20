@@ -134,10 +134,18 @@ body{
 }
 
 #hero-txt{
+    display: none;
     text-align: right;
     margin-right: 1em;
     width: 100%;
     margin-top: 29em;
+}
+
+#hero-txtbr{
+    text-align: right;
+    margin-right: 1em;
+    width: 100%;
+    margin-top: 27em;
 }
 
 #hero h2{
@@ -154,9 +162,7 @@ body{
 #hero h5{
     font-size: 20px;
     color: #ebe4e4;
-    text-decoration: underline 1px;
-    text-decoration-color: #5dbfd2;
-    text-underline-offset: 10px;
+
 }
 
 
@@ -668,9 +674,68 @@ svg#upi{
         background-position: top 33%  right 41%;
     }
 
+    #hero-txtbr {
+        display: none
+    }
+
     #hero-txt {
-        margin-right: 0em;
-        margin-top: 22em;
+    position: absolute;
+    bottom: 65px;
+    left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    animation: grow 1s ease ;
+    }
+
+    @keyframes grow {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    #hero h5{
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        
+    }
+
+    #hero h5 span{
+        font-weight: 500;
+        color: #b5ffa0;
+        font-size: 30px;
+    }
+
+    #hero h2{
+        color: #ffffff;
+        position: relative;
+        right: 50px;
+        font-size: 20px;
+    }
+    
+
+    .hero-btn{
+        position: absolute;
+        bottom: 10px;
+        left: 0px;
+        width: 97%;
+        height: 50px;
+        margin-left: 7px;
+        animation: elongate 1s ease ;
+        background-color: #ecd792e1;
+    }
+
+    @keyframes elongate {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
    
 
