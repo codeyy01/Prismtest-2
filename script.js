@@ -98,9 +98,9 @@ document.getElementById('newsletterForm').addEventListener('submit', function (e
     document.getElementById("newsletter").style.backgroundImage = "url('images/newsletter.jpg')";
  });
 
+ 
 
-
-
+ 
 
 // const modal = document.getElementById("swiperModal");
 // const slideContainer = document.getElementById("swiperSlides");

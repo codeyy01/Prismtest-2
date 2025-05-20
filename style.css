@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'spartan', sans-serif;
+    font-family: 'monsterrat' 'spartan', sans-serif;
 }
 
 h1{
@@ -31,7 +31,7 @@ h6{
 
 p{
     font-size: 16px;
-    color: #222;
+    color: #030303;
     margin: 15px 0 20px 0;
 }
 
@@ -202,7 +202,7 @@ body{
     width: 100%;
     border-radius: 20px;
 }
-
+/*
 #features .fe-box{
     display: flex;
     justify-content: space-between;
@@ -227,15 +227,17 @@ body{
     width: 100%;
     margin-right: 4px;
 }
+*/
 
 #product1{
     text-align: center;
 }
 
 #product1 .pro-container{
+    
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     padding-top: 20px;
     flex-wrap: wrap;
     align-items: center;
@@ -243,6 +245,7 @@ body{
 }
 
 #product1 .pro{
+    background-color: rgba(247, 246, 241, 0.946);
     width: 18%;
     min-width: 180px;
     padding: 10px 12px;
@@ -253,6 +256,7 @@ body{
     transition: 0.3s ease;
     position: relative;
 }
+    
 
 #product1 .pro:hover{
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
@@ -268,8 +272,6 @@ body{
     border-radius: 20px;
     transition: 0.1s ease;
 }
-
-
 
 #product1 .pro .des{
     text-align: start;
@@ -294,7 +296,7 @@ body{
 }
 
 #product1 .pro .cart{
-    width: 50px;
+    width: 100px;
     height: 50px;
     line-height: 50px;
     border-radius: 50px;
@@ -306,6 +308,8 @@ body{
     bottom: 20px;
     right: 10px;
 }
+
+
 
 #product1 .pro .view-gallery {
     position: absolute;
@@ -366,6 +370,57 @@ body{
     object-fit: cover;
 }
 
+
+#toShop{
+    height: 15vh;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#toShop a{
+    font-size: 40px;
+    text-decoration: underline 5px solid #00000046;
+    color: #fff;
+    background: linear-gradient(45deg, #065b72, #1599b0, #079ed0, #0a4851, #4dbacb);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+@keyframes gradientShift {
+  0% { background-position: 0% 100%; }
+  50% { background-position: 75% 100%; }
+  100% { background-position: 0% 100%; }
+}
+
+#toShop img{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    bottom: 75%;
+    right: -6%;
+    
+    animation: pulse 1.4s infinite ease-in-out;
+    user-select: none;
+}
+
+@keyframes pulse{
+            0%, 100%{
+                transform: scale(0.6) rotate(-60deg);
+            }
+            50%{
+                transform: scale(1.02) rotate(0deg);
+            }
+         }
+
+
 /* #swiperSlides{
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
@@ -382,6 +437,8 @@ body{
     z-index: 9999;
 }
 */
+
+
 #newsletter{
     display: flex;
     justify-content: space-between;
@@ -390,20 +447,20 @@ body{
     align-items: center;
     background-image: url(images/newsletter.jpg);
     background-repeat: no-repeat;
-    background-position: 60% 70%;
+    background-position: 77% 52%;
 }
     
 
 #newsletter h4{
     font-size: 22px;
     font-weight: 700;
-    color: #7a5513ed;
+    color: #ffffffed;
 }
 
 #newsletter p{
     font-size: 14px;
     font-weight: 600;
-    color: #d19d1c;
+    color: #f4e7e7;
 }
 
 #newsletter .form{
@@ -521,7 +578,12 @@ svg#upi{
     #product1 .pro {
     width: 30%;
     min-width: 283px;
-}
+    }
+    
+    #toShop img{
+        right: -8%;
+        bottom: 79.7%;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -537,7 +599,7 @@ svg#upi{
     }
     #features .fe-box {
         padding-top: 1px;
-        padding-left: 1em;
+        
     }
     #product1 .pro {
         width: 47%;
@@ -548,6 +610,10 @@ svg#upi{
     width: 8%;
     }
 
+    #toShop img{
+        right: -11.52%;
+        bottom: 80%;
+    }
 
 }
 
@@ -608,9 +674,10 @@ svg#upi{
     }
    
 
-    #features{
-        display: none;
-    }
+    #features .fe-img1 {
+    width: 100%;
+    flex-direction: column;
+}
 
     #product1 .pro {
         width: 46%;
@@ -668,6 +735,11 @@ svg#upi{
         text-align: center;
     }
 
+    #toShop img{
+        right: -14.5%;
+        bottom: 81%;
+    }
+
 }
 
 @media (max-width: 440px){
@@ -714,5 +786,17 @@ svg#upi{
         text-align: center;
         font-size: 40px;
     }
+
+    #toShop img{
+        right: -26.9%;
+        bottom: 80%;
+    }
     
+}
+
+@media (max-width: 375px){
+    #toShop img{
+        right: -29%;
+        bottom: 83.5%;
+    }
 }
