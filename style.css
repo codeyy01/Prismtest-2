@@ -162,7 +162,6 @@ body{
 #hero h5{
     font-size: 20px;
     color: #ebe4e4;
-
 }
 
 
@@ -701,6 +700,7 @@ svg#upi{
     #hero h5{
         font-size: 30px;
         color: rgb(255, 255, 255);
+        text-align: center;
         
     }
 
@@ -713,7 +713,7 @@ svg#upi{
     #hero h2{
         color: #ffffff;
         position: relative;
-        right: 50px;
+        
         font-size: 20px;
     }
     
