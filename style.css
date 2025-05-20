@@ -174,7 +174,7 @@ body{
 .hero-btn{
     width: 150px;
     height: 50px;
-    background-color: #ffffff;
+    background-color: #ffffffdb;
     border: none;
     border-radius: 10px;
     transition: 0.5s ease-in-out;
@@ -183,12 +183,7 @@ body{
     transition: transform 0.99s ease;
 }
 
-.hero-btn:hover{
-    transform: scale(1.01);
-    border-radius: 12px;
-    background-color: #ffffff;
-    cursor: pointer;
-}
+
 
 #hero .logo-container{
     margin-top: 1em;
@@ -730,12 +725,7 @@ svg#upi{
         background-color: #ecd792e1;
     }
 
-    .hero-btn:hover{
-        transform: scale(1.01);
-        border-radius: 12px;
-        background-color: #ecd792e1;
-        cursor: pointer;
-    }
+ 
 
     @keyframes elongate {
         0% {
