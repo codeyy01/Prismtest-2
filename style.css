@@ -184,7 +184,7 @@ body{
 }
 
 .hero-btn:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
     border-radius: 12px;
     background-color: #ffffff;
     cursor: pointer;
@@ -728,6 +728,13 @@ svg#upi{
         margin-left: 7px;
         animation: elongate 1s ease ;
         background-color: #ecd792e1;
+    }
+
+    .hero-btn:hover{
+        transform: scale(1.01);
+        border-radius: 12px;
+        background-color: #ecd792e1;
+        cursor: pointer;
     }
 
     @keyframes elongate {
