@@ -617,6 +617,41 @@ svg#upi{
 
 }
 
+@media (max-width: 932px){
+    #hero-txtbr {
+        text-align: center;
+        margin-right: 43em;
+        width: 22%;
+        margin-top: -12em;
+        animation: grow 1s ease ;
+    }
+
+    @keyframes grow {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .hero-btn{
+        position: absolute;
+        left: 50px;
+        animation: elongate 1s ease ;
+        background-color: #ecd792e1;
+    }
+    
+    @keyframes elongate {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
 @media (max-width: 800px) {
 
     #header {
