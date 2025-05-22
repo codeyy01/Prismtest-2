@@ -1,53 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'monsterrat' 'spartan', sans-serif;
 }
 
-h1{
+h1 {
     font-size: 50px;
     line-height: 64px;
     color: #222;
 }
 
-h2{
+h2 {
     font-size: 46px;
     line-height: 54px;
     color: #222;
 }
 
-h4{
+h4 {
     font-size: 20px;
     color: #222;
 }
 
-h6{
+h6 {
     font-size: 12px;
     font-weight: 700;
 }
 
-p{
+p {
     font-size: 16px;
     color: #030303;
     margin: 15px 0 20px 0;
 }
 
-.section-p1{
+.section-p1 {
     padding: 40px 80px;
 }
 
-.section-m1{
+.section-m1 {
     margin: 40px 0;
 }
 
-body{
+body {
     width: 100%;
 }
 
-#header{
+#header {
     width: 100%;
     height: 120px;
     display: flex;
@@ -63,12 +63,12 @@ body{
     z-index: 999;
 }
 
-#header a{
+#header a {
     text-decoration: none;
     color: #ffffff;
 }
 
-#navbar{
+#navbar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,14 +76,14 @@ body{
     margin-top: 46px;
 }
 
-#navbar li{
+#navbar li {
     list-style: none;
     padding: 0 20px;
     position: relative;
 
 }
 
-#navbar li a{
+#navbar li a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 28px;
@@ -97,7 +97,7 @@ body{
 }
 
 #navbar li a.active::after,
-#navbar li a:hover::after{
+#navbar li a:hover::after {
     content: "";
     width: 30%;
     height: 2px;
@@ -107,33 +107,34 @@ body{
     left: 35%;
 }
 
-#mobile{
+#mobile {
     display: none;
     align-items: center;
 }
 
-#bar{
+#bar {
     margin-top: 24px;
 }
 
-#close{
+#close {
     display: none;
-    
+
 }
 
-#hero{
-    background-image: url(images/hero/RNI-Films-IMG-6F3F5E97-0A9F-4DA7-968C-DDB32E41CF41.JPG);;
+#hero {
+    background-image: url(images/hero/RNI-Films-IMG-6F3F5E97-0A9F-4DA7-968C-DDB32E41CF41.JPG);
+    ;
     width: 100%;
     height: 93vh;
     background-size: cover;
-    background-position: top 43%  left 12% ;
+    background-position: top 43% left 12%;
     padding-right: 1em;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;   
+    align-items: flex-end;
 }
 
-#hero-txt{
+#hero-txt {
     display: none;
     text-align: right;
     margin-right: 1em;
@@ -141,37 +142,37 @@ body{
     margin-top: 29em;
 }
 
-#hero-txtbr{
+#hero-txtbr {
     text-align: right;
     margin-right: 1em;
     width: 100%;
     margin-top: 27em;
 }
 
-#hero h2{
+#hero h2 {
     margin-top: 10px;
     color: #f7ef8a;
     font-weight: 600;
 }
 
-#hero h2 span{
+#hero h2 span {
     color: #f7ef8a;
     font-weight: 600;
 }
 
-#hero h5{
+#hero h5 {
     font-size: 20px;
     color: #ebe4e4;
 }
 
 
-#hero h5 span{
+#hero h5 span {
     font-weight: 750;
     color: #73e491;
     font-size: 25px;
 }
 
-.hero-btn{
+.hero-btn {
     width: 150px;
     height: 50px;
     background-color: #ffffffdb;
@@ -185,23 +186,24 @@ body{
 
 
 
-#hero .logo-container{
+#hero .logo-container {
     margin-top: 1em;
     margin-left: 200em;
 
 }
 
-#hero .psm-logo{
+#hero .psm-logo {
     width: 15%;
     min-width: 196px;
-    border:  solid #2d260c0d;
+    border: solid #2d260c0d;
     border-radius: 20px;
 }
 
-#hero .psm-logo img{
+#hero .psm-logo img {
     width: 100%;
     border-radius: 20px;
 }
+
 /*
 #features .fe-box{
     display: flex;
@@ -229,12 +231,12 @@ body{
 }
 */
 
-#product1{
+#product1 {
     text-align: center;
 }
 
-#product1 .pro-container{
-    
+#product1 .pro-container {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -244,7 +246,7 @@ body{
     gap: 42px;
 }
 
-#product1 .pro{
+#product1 .pro {
     background-color: rgba(247, 246, 241, 0.946);
     width: 18%;
     min-width: 180px;
@@ -256,46 +258,46 @@ body{
     transition: 0.3s ease;
     position: relative;
 }
-    
 
-#product1 .pro:hover{
+
+#product1 .pro:hover {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
 }
 
-#product1 .pro img:hover{
+#product1 .pro img:hover {
     width: 101%;
 }
 
-#product1 .pro img{
+#product1 .pro img {
     width: 100%;
     height: 300px;
     border-radius: 20px;
     transition: 0.1s ease;
 }
 
-#product1 .pro .des{
+#product1 .pro .des {
     text-align: start;
     padding: 10px 0;
 }
 
-#product1 .pro .des span{
+#product1 .pro .des span {
     color: #646262;
 }
 
-#product1 .pro .des h5{
+#product1 .pro .des h5 {
     padding-top: 7px;
     color: #1a1a1a;
     font-size: 20px;
 }
 
-#product1 .pro .des h4{
+#product1 .pro .des h4 {
     padding-top: 7px;
     font-size: 18px;
     font-weight: 700;
     color: #088178;
 }
 
-#product1 .pro .cart{
+#product1 .pro .cart {
     width: 100px;
     height: 50px;
     line-height: 50px;
@@ -364,27 +366,27 @@ body{
     max-height: 90%;
 }
 
-.pro img, .feature-img{
+.pro img,
+.feature-img {
     aspect-ratio: 3/4;
     width: 100%;
     object-fit: cover;
 }
 
 
-#toShop{
+#toShop {
     height: 15vh;
     width: 100%;
     text-align: center;
-    
 }
 
-#toShop a{
+#toShop a {
     font-size: 40px;
     text-decoration: underline 5px solid #00000046;
     color: #fff;
     background: linear-gradient(45deg, #065b72, #1599b0, #079ed0, #0a4851, #4dbacb);
     background-size: 400% 400%;
-    animation: gradientShift 10s ease infinite;
+    animation: gradientShift 10s ease infinite alternate-reverse;
     display: flex;
     justify-content: center;
     height: 100%;
@@ -395,30 +397,19 @@ body{
 
 
 @keyframes gradientShift {
-  0% { background-position: 0% 100%; }
-  50% { background-position: 75% 100%; }
-  100% { background-position: 0% 100%; }
-}
+    0% {
+        background-position: 0% 100%;
+        transform: scale(1);
+    }
 
-#toShop img{
-    position: relative;
-    width: 75px;
-    height: 75px;
-    bottom: 75%;
-    right: -6%;
-    
-    animation: pulse 1.4s infinite ease-in-out;
-    user-select: none;
-}
+    50% {
+        background-position: 75% 100%;
+        transform: scale(1.02);    }
 
-@keyframes pulse{
-            0%, 100%{
-                transform: scale(0.6) rotate(-60deg);
-            }
-            50%{
-                transform: scale(1.02) rotate(0deg);
-            }
-         }
+    100% {
+        background-position: 0% 100%;
+        transform: scale(1);    }
+}
 
 
 /* #swiperSlides{
@@ -439,7 +430,7 @@ body{
 */
 
 
-#newsletter{
+#newsletter {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -449,26 +440,26 @@ body{
     background-repeat: no-repeat;
     background-position: 77% 52%;
 }
-    
 
-#newsletter h4{
+
+#newsletter h4 {
     font-size: 22px;
     font-weight: 700;
     color: #ffffffed;
 }
 
-#newsletter p{
+#newsletter p {
     font-size: 14px;
     font-weight: 600;
     color: #f4e7e7;
 }
 
-#newsletter .form{
+#newsletter .form {
     display: flex;
     width: 11%;
 }
 
-#newsletter input{
+#newsletter input {
     height: 3.125rem;
     padding: 0 1.25em;
     font-size: 14px;
@@ -481,7 +472,7 @@ body{
 }
 
 
-#newsletter button{
+#newsletter button {
     height: 3.125rem;
     width: 100%;
     border: 1px solid transparent;
@@ -493,54 +484,55 @@ body{
 }
 
 
-footer{
+footer {
     background-color: #222;
 
 }
 
-footer .footer-content{
+footer .footer-content {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-footer .col{
+footer .col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-footer .col p span{
+footer .col p span {
     color: #fdfbfb;
 }
 
-footer h2{
+footer h2 {
     color: #fff;
 }
 
-footer h4{
+footer h4 {
     color: #eee9e9;
 }
 
-footer .col a,p{
+footer .col a,
+p {
     text-decoration: none;
     color: #aaa4a4;
 }
 
-footer a:hover{
+footer a:hover {
     text-decoration: underline;
     color: #ddc8c8;
 }
 
-.fa-instagram{
+.fa-instagram {
     color: #e960d9;
 }
 
-.fa-instagram:hover{
+.fa-instagram:hover {
     color: #b385ad;
 }
 
-svg#upi{
+svg#upi {
     width: 6em;
     height: 2em;
 }
@@ -555,7 +547,8 @@ svg#upi{
 
 .swiper-modal {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.9);
@@ -564,23 +557,25 @@ svg#upi{
     align-items: center;
     z-index: 9999;
 }
+
 .mySwiper {
     width: 90vw;
     height: 90vh;
 }
 
-@media (max-width: 1600px){
+@media (max-width: 1600px) {
     #hero-txt {
         margin-right: 0em;
         margin-top: 25em;
-        
+
     }
+
     #product1 .pro {
-    width: 30%;
-    min-width: 283px;
+        width: 30%;
+        min-width: 283px;
     }
-    
-    #toShop img{
+
+    #toShop img {
         right: -8%;
         bottom: 79.7%;
     }
@@ -590,62 +585,68 @@ svg#upi{
     #header {
         padding: 20px 30px;
     }
+
     #hero-txt {
         margin-right: 1em;
         margin-top: 18em;
     }
+
     #features .fe-img1 {
         min-width: 205px;
     }
+
     #features .fe-box {
         padding-top: 1px;
-        
+
     }
+
     #product1 .pro {
         width: 47%;
         min-width: 20px;
     }
 
     #closeSwiper {
-    width: 8%;
+        width: 8%;
     }
 
-    #toShop img{
+    #toShop img {
         right: -11.52%;
         bottom: 80%;
     }
 
 }
 
-@media (max-width: 932px){
+@media (max-width: 932px) {
     #hero-txtbr {
         text-align: center;
         margin-right: 43em;
         width: 22%;
         margin-top: -12em;
-        animation: grow 1s ease ;
+        animation: grow 1s ease;
     }
 
     @keyframes grow {
         0% {
             transform: scale(0);
         }
+
         100% {
             transform: scale(1);
         }
     }
 
-    .hero-btn{
+    .hero-btn {
         position: absolute;
         left: 50px;
-        animation: elongate 1s ease ;
+        animation: elongate 1s ease;
         background-color: #ecd792e1;
     }
-    
+
     @keyframes elongate {
         0% {
             transform: scale(0);
         }
+
         100% {
             transform: scale(1);
         }
@@ -677,21 +678,21 @@ svg#upi{
         z-index: 1000;
     }
 
-    #navbar.active{
+    #navbar.active {
         right: 0px;
         transition: 0.3s ease;
     }
 
-    #navbar l1{
+    #navbar l1 {
         margin-bottom: 55px;
     }
 
-    #mobile{
+    #mobile {
         display: flex;
         align-items: center;
     }
 
-    #close{
+    #close {
         position: absolute;
         top: 30px;
         left: 7px;
@@ -700,7 +701,7 @@ svg#upi{
 
     #hero {
         height: 88vh;
-        background-position: top 33%  right 41%;
+        background-position: top 33% right 41%;
     }
 
     #hero-txtbr {
@@ -708,74 +709,76 @@ svg#upi{
     }
 
     #hero-txt {
-    position: absolute;
-    bottom: 65px;
-    left: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    animation: grow 1s ease ;
+        position: absolute;
+        bottom: 65px;
+        left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        animation: grow 1s ease;
     }
 
     @keyframes grow {
         0% {
             transform: scale(0);
         }
+
         100% {
             transform: scale(1);
         }
     }
 
-    #hero h5{
+    #hero h5 {
         font-size: 30px;
         color: rgb(255, 255, 255);
         text-align: center;
-        
+
     }
 
-    #hero h5 span{
+    #hero h5 span {
         font-weight: 500;
         color: #b5ffa0;
         font-size: 30px;
         text-align: center;
     }
 
-    #hero h2{
+    #hero h2 {
         color: #ffffff;
         position: relative;
-        
+
         font-size: 20px;
     }
-    
 
-    .hero-btn{
+
+    .hero-btn {
         position: absolute;
         bottom: 10px;
         left: 0px;
         width: 97%;
         height: 50px;
         margin-left: 7px;
-        animation: elongate 1s ease ;
+        animation: elongate 1s ease;
         background-color: #ecd792e1;
     }
 
- 
+
 
     @keyframes elongate {
         0% {
             transform: scale(0);
         }
+
         100% {
             transform: scale(1);
         }
     }
-   
+
 
     #features .fe-img1 {
-    width: 100%;
-    flex-direction: column;
-}
+        width: 100%;
+        flex-direction: column;
+    }
 
     #product1 .pro {
         width: 46%;
@@ -786,7 +789,7 @@ svg#upi{
         font-weight: 700;
         color: #ffffffed;
     }
-    
+
     #newsletter p {
         font-size: 11px;
         font-weight: 400;
@@ -797,7 +800,7 @@ svg#upi{
         width: 45%;
     }
 
-    footer .footer-logo{
+    footer .footer-logo {
         text-align: center;
         text-decoration: none;
     }
@@ -809,11 +812,11 @@ svg#upi{
 
     }
 
-   footer .col{
+    footer .col {
         margin: 13px;
-   }
+    }
 
-   element.style {
+    element.style {
         position: absolute;
         top: 10px;
         right: 10px;
@@ -823,7 +826,7 @@ svg#upi{
 
     #navbar li {
         list-style: none;
-        padding: 0px  20px;
+        padding: 0px 20px;
         margin: 17px 0px 0px;
         position: relative;
         border: 2px solid #265915;
@@ -833,39 +836,47 @@ svg#upi{
         text-align: center;
     }
 
-    #toShop img{
+    #toShop img {
         right: -14.5%;
         bottom: 81%;
     }
 
 }
 
-@media (max-width: 440px){
+@media (max-width: 440px) {
     #product1 .pro-container {
         justify-content: center;
     }
+
     #product1 .pro {
         width: 100%;
     }
+
     #newsletter {
         height: 16em;
     }
-    #newsletter input{
+
+    #newsletter input {
         width: 100%;
     }
-    #newsletter button{
+
+    #newsletter button {
         width: 100%;
     }
-    #newsletter .form{
+
+    #newsletter .form {
         width: 100%;
     }
-    #newsletter p{
+
+    #newsletter p {
         margin-left: 5px;
     }
+
     #hero .psm-logo {
-    min-width: 133px;
+        min-width: 133px;
     }
-    #closeSwiper{ 
+
+    #closeSwiper {
         position: fixed;
         top: auto;
         bottom: 20px;
@@ -875,6 +886,7 @@ svg#upi{
         border-radius: 70px;
         z-index: 10000;
     }
+
     #navbar li {
         margin: 17px 0px 0px;
         border: 2px solid #586011;
@@ -885,15 +897,15 @@ svg#upi{
         font-size: 40px;
     }
 
-    #toShop img{
+    #toShop img {
         right: -26.9%;
         bottom: 80%;
     }
-    
+
 }
 
-@media (max-width: 375px){
-    #toShop img{
+@media (max-width: 375px) {
+    #toShop img {
         right: -29%;
         bottom: 83.5%;
     }
