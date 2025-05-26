@@ -298,7 +298,7 @@ body {
 }
 
 #product1 .pro .cart {
-    width: 100px;
+    width: 90px;
     height: 50px;
     line-height: 50px;
     border-radius: 50px;
@@ -399,16 +399,15 @@ body {
 @keyframes gradientShift {
     0% {
         background-position: 0% 100%;
-        transform: scale(1);
     }
 
     50% {
         background-position: 75% 100%;
-        transform: scale(1.02);    }
+   }
 
     100% {
         background-position: 0% 100%;
-        transform: scale(1);    }
+ }
 }
 
 
